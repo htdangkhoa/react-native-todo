@@ -59,8 +59,16 @@ class ListItem extends Component {
     }
 
     render() {
+        if (this.props.data.length === 0) {
+            return(
+                <View style={ styles.containerNoContent }>                    
+                    <Text style={styles.message}>No note!!!</Text>
+                </View>
+            )
+        }
+
         return(
-            <View style={styles.container}>
+            <View style={styles.containerHasContent}>
                 <ListView 
                     enableEmptySections={true} 
                     dataSource={this.dataSource} 
@@ -73,8 +81,16 @@ class ListItem extends Component {
 }
 
 const styles = StyleSheet.create({
-    container: {
+    containerHasContent: {
         flex: 1
+    },
+    containerNoContent: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    message: {
+        color: '#777'
     }
 })
 
