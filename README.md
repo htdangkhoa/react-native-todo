@@ -1,4 +1,7 @@
 # react-native-todo
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/htdangkhoa/react-native-todo.svg)](https://greenkeeper.io/)
+
 This is a todo app using React Native with Redux and AsyncStorage.
 
 ### **Requires**
